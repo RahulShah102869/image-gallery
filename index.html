@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>Image Gallery · Lightbox + Filters</title>
+    <!-- Font Awesome for icons -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css' />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class='gallery-wrapper'>
+        <h1><i class='fas fa-images'></i> Gallery · filters & lightbox</h1>
+
+        <!-- filter / categories -->
+        <div class='filter-bar' id='filterBar'>
+            <button class='filter-btn active' data-filter='all'>All</button>
+            <button class='filter-btn' data-filter='nature'>Nature</button>
+            <button class='filter-btn' data-filter='city'>City</button>
+            <button class='filter-btn' data-filter='abstract'>Abstract</button>
+            <button class='filter-btn' data-filter='people'> People</button>
+        </div>
+        <!-- Search images... -->
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="🔍 Search images...">
+        </div>
+
+        <!-- gallery grid -->
+        <div class='gallery-grid' id='galleryGrid'></div>
+
+        <!-- navigation prev/next + page indicator -->
+        <div class='gallery-nav'>
+            <button class='nav-btn' id='prevPageBtn'><i class='fas fa-chevron-left'></i></button>
+            <span class='page-indicator' id='pageIndicator'>1 / 1</span>
+            <button class='nav-btn' id='nextPageBtn'><i class='fas fa-chevron-right'></i></button>
+        </div>
+    </div>
+
+    <!-- lightbox -->
+    <div class='lightbox' id='lightbox'>
+        <div class='lightbox-content' id='lightboxContent'>
+            <img id='lightboxImg' src='' alt='lightbox' />
+            <button class='lightbox-close' id='lightboxClose'><i class='fas fa-times'></i></button>
+            <button class='lightbox-nav prev' id='lightboxPrev'><i class='fas fa-chevron-left'></i></button>
+            <button class='lightbox-nav next' id='lightboxNext'><i class='fas fa-chevron-right'></i></button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
